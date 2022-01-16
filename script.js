@@ -26,11 +26,11 @@ function calcularPeso() {
     //se masculino (significa se masculino == true)
     if (masculino) {
         let peso = 22 * Math.pow(altura, 2); //Math.pow eleva ao quadrado
-        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(3)}Kg`
+        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(2)} Kg`
 
     } else {
         let peso = 21 * Math.pow(altura, 2); //Math.pow eleva ao quadrado
-        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(3)}Kg`
+        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(2)} Kg`
 
     }
     //apresenta a resposta (altera o conteudo da linha outResposta)
