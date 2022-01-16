@@ -26,17 +26,46 @@ function calcularPeso() {
     //se masculino (significa se masculino == true)
     if (masculino) {
         let peso = 22 * Math.pow(altura, 2); //Math.pow eleva ao quadrado
-    outResposta.textContent = `${nome}: Seu peso ideal e ${peso.toFixed(3)}Kg`
+        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(3)}Kg`
 
     } else {
         let peso = 21 * Math.pow(altura, 2); //Math.pow eleva ao quadrado
-    outResposta.textContent = `${nome}: Seu peso ideal e ${peso.toFixed(3)}Kg`
+        outResposta.textContent = `${nome}: Seu peso ideal é ${peso.toFixed(3)}Kg`
 
     }
     //apresenta a resposta (altera o conteudo da linha outResposta)
-    document.querySelector('.resposta').style.display = 'block';
+    //  document.querySelector('.resposta').style.display = 'block';
 }
 //cria referencia ao elemento btCalcular e registra evento associado a calcularPeso
 let btResultado = document.querySelector('#btcalcular');
 
 btResultado.addEventListener('click', calcularPeso);
+
+//função que vai limpar todos os campos
+// function limparCampo() {
+//criar referência aos elementos manipulados pela function
+// document.querySelector('#inNome').value = "";
+// document.querySelector('#rbMasculino').checked = false;
+// document.querySelector('#rbFeminino').checked = false;
+// document.querySelector('#inAltura').value = "";
+// document.querySelector('#outResposta').textContent = "";
+
+//posição (joga o foco) no elemento inNome
+
+// document.querySelector('#inNome').focus();
+
+//}
+
+//***outra forma de limpar os campos
+
+function limparCampo() {
+
+    //recarrega a pagina
+    location.reload();
+    //posiciona (joga o foco) no elemento inNome
+    document.querySelector('#inNome').focus();
+
+
+}
+let btLimpar = document.querySelector('#btLimpar')
+btLimpar.addEventListener('click', limparCampo);
